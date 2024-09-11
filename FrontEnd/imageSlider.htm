@@ -1,0 +1,83 @@
+<div class="img-slider-ctr"></div>
+          <div class="img-slider">
+            <img
+              src="https://g1.img-dpreview.com/492F4EBD5BF24D2198D80D921BA022F7.jpg"
+              alt="nature-photo"
+              id="img-slide-1"
+            />
+            <img
+              src="https://images.unsplash.com/photo-1725921874109-79d1057c7e72?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="nature-photo"
+              id="img-slide-2"
+            />
+            <img
+              src="https://images.unsplash.com/photo-1725576415790-a5b4009a7952?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="nature-photo"
+              id="img-slide-3"
+            />
+          </div>
+          <div class="slider-nav">
+            <a href="#img-slide-1"></a>
+            <a href="#img-slide-2"></a>
+            <a href="#img-slide-3"></a>
+          </div>
+        </div>
+
+        <style>
+            /*------------------ Image-Slider-Container -------------------  */
+
+.img-slider-ctr {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+/* ---------- img slides --------------- */
+
+.img-slider {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 16/9;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  transition: 0.5s ease-in-out;
+}
+
+.img-slider::-webkit-scrollbar {
+  display: none;
+}
+
+/* ------ Images ------------ */
+
+.img-slider > img {
+  flex: 1 0 100%;
+  object-fit: cover;
+  scroll-snap-align: start;
+}
+
+/* -------- Image Slider Nav */
+
+.slider-nav {
+  display: flex;
+  column-gap: 1.5rem;
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.slider-nav > a {
+  padding: 8px;
+  border-radius: 50%;
+  opacity: 0.75;
+  border: 2px solid #ffffff;
+  transition: opacity 0.4s ease;
+}
+
+.slider-nav > a:hover {
+  background-color: #ffffff;
+}
+
+        </style>

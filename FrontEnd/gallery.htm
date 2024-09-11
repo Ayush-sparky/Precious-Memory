@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Precious Memories - Gallery</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Precious Memories</h1>
+      <nav>
+        <ul>
+          <li><a href="/FrontEnd/index.htm">Portfolio</a></li>
+          <li><a href="/FrontEnd/gallery.htm">Gallery</a></li>
+          <li><a href="/FrontEnd/experience.htm">Experience & Skills</a></li>
+          <li><a href="/FrontEnd/contact_page.htm">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="gallery">
+      <h2>Gallery</h2>
+      <div class="filter-options">
+        <button onclick="filterGallery('all')">All</button>
+        <button onclick="filterGallery('weddings')">Weddings</button>
+        <button onclick="filterGallery('portraits')">Portraits</button>
+        <button onclick="filterGallery('nature')">Nature</button>
+      </div>
+      <div class="gallery-item" data-category="weddings">
+        <img src="images/wedding1.jpg" alt="Wedding 1" />
+      </div>
+      <!-- Add more gallery items with different data-category attributes -->
+    </section>
+
+    <footer>
+      <p>&copy; 2024 Precious Memories. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

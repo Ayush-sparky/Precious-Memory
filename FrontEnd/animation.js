@@ -40,7 +40,8 @@ tl.from(".where",{
 tl.from(".eve-pic",{
   x : "300px",
   opacity : 0,
-  duration : 1
+  duration : 1,
+  scale: 0.5
 })
 
 tl.from(".tells-a-story", {

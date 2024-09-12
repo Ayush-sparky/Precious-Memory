@@ -1,3 +1,9 @@
+:root{
+  --primary-color: #001f3f;
+  --btn-color: #FF0000;
+  --txt-color: #ffffff;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -37,7 +43,7 @@ main {
 }
 /* -------------------------- NavBar---------------------------- */
 nav {
-  z-index: 2;
+  z-index: 100;
   position: fixed;
   top: 0;
   width: 100%;
@@ -201,6 +207,7 @@ ul > li > a:hover {
 }
 
 .photo-wrapper {
+  z-index: 2;
   width: 100%;
   height: 80%;
   display: grid;
@@ -264,7 +271,7 @@ ul > li > a:hover {
 .container {
   width: 400px;
   height: 220px;
-  background-color: blueviolet;
+  background-color: red;
   border-radius: 20px;
   position: relative;
   display: flex;
@@ -367,7 +374,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #01172d;
+  background-color: #000;
 }
 
 .c-r-txt {

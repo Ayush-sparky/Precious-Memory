@@ -1,7 +1,9 @@
-:root{
+:root {
   --primary-color: #001f3f;
-  --btn-color: #FF0000;
+  --btn-color: #ff0000;
+  --btn-color-hover: #ff0000dd;
   --txt-color: #ffffff;
+  --title-color: #ffd700;
 }
 
 * {
@@ -16,8 +18,10 @@ html,
 body {
   height: 100%;
   width: 100%;
-  background-color: #001f3f;
+  background-color: var(--primary-color);
 }
+
+/* -------------------- Some styling for the web browser's scroll bar -------------- */
 
 ::-webkit-scrollbar {
   width: 12px;
@@ -36,7 +40,6 @@ body {
 main {
   height: 90%;
   width: 100%;
-  background-color: #001f3f;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -110,16 +113,16 @@ ul > li > a:hover {
 }
 
 .sign-up-in > a {
-  font-size: 20px;
+  font-size: 18px;
   text-decoration: none;
-  padding: 6px 12px;
-  border-radius: 10px;
+  padding: 6px 14px;
+  border: 1px solid #ffffff;
+  border-radius: 20px;
   transition: 0.3s ease-in;
-  background-color: rgb(8, 184, 8);
 }
 
 .sign-up-in > a:hover {
-  background-color: rgb(8, 120, 8);
+  background-color: #ffffffaa;
 }
 
 /* ------------------------------------------ Hero Section -------------------------------------- */
@@ -163,7 +166,7 @@ ul > li > a:hover {
 }
 
 .where {
-  font-size: 70px;
+  font-size: 65px;
 }
 
 .eve-pic {
@@ -184,17 +187,18 @@ ul > li > a:hover {
 }
 
 .contact-btn {
-  padding: 10px 14px;
+  padding: 8px 12px;
   font-size: 18px;
   font-weight: 700;
-  background-color: rgb(8, 184, 8);
+  background-color: var(--btn-color);
   text-decoration: none;
-  border-radius: 8px;
-  transition: background-color 0.3s ease-in;
+  transition: 0.3s ease-in;
 }
 
 .contact-btn:hover {
-  background-color: rgb(8, 120, 8);
+  background-color: var(--btn-color-hover);
+  scale: 1.1;
+  box-shadow: 0 2px 10px #ffffff;
 }
 
 /* ------------------------- Photo Section ------------------------------ */
@@ -209,31 +213,50 @@ ul > li > a:hover {
 .photo-wrapper {
   z-index: 2;
   width: 100%;
-  height: 80%;
+  height: 90%;
   display: grid;
   gap: 10px;
-  grid-template-areas:
-    "one one"
-    "two three";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
 }
 
 .img-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 8px;
+  overflow: hidden;
+  position: relative;
 }
 
 .pic-1 {
-  grid-area: one;
+  grid-column: 1 / span 2; /* Span across both columns */
+  grid-row: 1 / span 2; /* Span across the first two rows */
   background-color: red;
 }
 
 .pic-2 {
-  grid-area: two;
+  grid-column: 1;
+  grid-row: 3; /* Use the default position */
   background-color: #ffffff;
 }
 
 .pic-3 {
-  grid-area: three;
+  grid-column: 2;
+  grid-row: 3;
   background-color: #fff222;
+}
+
+.img-div > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hidden-hover-txt{
+  font-size: 18px;
+  position: absolute;
+  bottom: -50px;
 }
 
 /*------------------------------------------ Testimonial Section -------------------------------------------*/

@@ -54,47 +54,17 @@ tl.from(".tells-a-story", {
 
 // Animation for hover on images of hero section
 
-// const naturePicDivEl = document.querySelector("#nature-pic-div");
-// const eventsPicDivEl = document.querySelector("#events-pic-div");
-// const cinematicPicDivEl =document.querySelector("#cinematic-pic-div");
-// const natureHiddenTxtEl = document.querySelector("#nature-hidden-txt");
-// const eventHiddenTxtEl = document.querySelector("#event-hidden-txt");
-// const cinematicHiddenTxtEl = document.querySelector("#cinematic-hidden-txt");
-
-// // Nature Images Div
-
-// naturePicDivEl.addEventListener("mouseover",() => {
-//   natureHiddenTxtEl.style.bottom = "50%";
-//   console.log("Nature Lover");
-// })
-
-// imageDivEl.addEventListener('mouseout',() => {
-//   natureHiddenTxtEl.style.bottom = "-100%"
-// })
-
-// // Wedding and Cinematic Images Div
-
-// eventsPicDivEl.addEventListener("mouseover",() => {
-//   console.log("I love wedding ko masu bhat alot");
-// })
-
-// cinematicPicDivEl.addEventListener("mouseover",() => {
-//   console.log("I will shoot a cinema fs");
-// })
-
-
   // Function to show the hidden text
   function showText(el) {
     const hiddenTxt = el.querySelector(".hidden-hover-txt");
     const imageEl = el.querySelector('.pic-img');
-
     gsap.to(hiddenTxt, {
-      bottom: "50%", // Animate to show the text
+      bottom: "45%", // Animate to show the text
       duration: 0.3, // Duration of the animation
     });
 
     gsap.to(imageEl,{
-      backdropFilter : 'blur(5px)'
+      filter : 'blur(2px) brightness(0.7)'
     })
   }
 
@@ -108,7 +78,7 @@ tl.from(".tells-a-story", {
     });
 
     gsap.to(imageEl, {
-      backdropFilter: "blur(0px)",
+      filter: "blur(0px) brightness(1)",
     });
   }
 
@@ -118,6 +88,6 @@ tl.from(".tells-a-story", {
 
   // Attach event listeners to each image div
   imgDivs.forEach(imgDiv => {
-    imgDiv.addEventListener('mouseover', () => showText(imgDiv));
-    imgDiv.addEventListener('mouseout', () => hideText(imgDiv));
+    imgDiv.addEventListener('mouseenter', () => showText(imgDiv));
+    imgDiv.addEventListener('mouseleave', () => hideText(imgDiv));
   });

@@ -12,6 +12,7 @@
   box-sizing: border-box;
   color: #ffffff;
   font-family: cursive;
+  scroll-behavior: smooth;
 }
 
 html,
@@ -24,16 +25,18 @@ body {
 /* -------------------- Some styling for the web browser's scroll bar -------------- */
 
 ::-webkit-scrollbar {
-  width: 12px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background-color: cyan;
+  background-color: #000000;
 }
 
 ::-webkit-scrollbar-thumb {
   background: #888;
 }
+
+
 
 /* --------------------------------------------- Main Page------------------------------------------ */
 
@@ -43,6 +46,9 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 1px solid #000000;
+  box-shadow: 0 2px 5px #000000;
+
 }
 /* -------------------------- NavBar---------------------------- */
 nav {
@@ -114,15 +120,13 @@ ul > li > a:hover {
 
 .sign-up-in > a {
   font-size: 18px;
+  color: #d3baba;
   text-decoration: none;
-  padding: 6px 14px;
-  border: 1px solid #ffffff;
-  border-radius: 20px;
   transition: 0.3s ease-in;
 }
 
 .sign-up-in > a:hover {
-  background-color: #ffffffaa;
+  color: var(--txt-color);
 }
 
 /* ------------------------------------------ Hero Section -------------------------------------- */
@@ -144,7 +148,6 @@ ul > li > a:hover {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  gap: 15px;
 }
 
 /*------------------ Main Quote Section --------------------------*/
@@ -155,6 +158,7 @@ ul > li > a:hover {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  gap: 10px;
 }
 
 /* -------- Quote ------ */
@@ -166,15 +170,15 @@ ul > li > a:hover {
 }
 
 .where {
-  font-size: 65px;
+  font-size: 50px;
 }
 
 .eve-pic {
-  font-size: 60px;
+  font-size: 40px;
 }
 
 .tells-a-story {
-  font-size: 50px;
+  font-size: 40px;
 }
 
 /* ----------------- Contact Button Section -------------- */
@@ -198,7 +202,6 @@ ul > li > a:hover {
 .contact-btn:hover {
   background-color: var(--btn-color-hover);
   scale: 1.1;
-  box-shadow: 0 2px 10px #ffffff;
 }
 
 /* ------------------------- Photo Section ------------------------------ */
@@ -251,13 +254,24 @@ ul > li > a:hover {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  backdrop-filter: blur(10px);
+  cursor: pointer;
 }
 
 .hidden-hover-txt{
   font-size: 18px;
   position: absolute;
   bottom: -50px;
+  cursor: pointer;
 }
+
+/*------------------------------------- About us Section ----------------------------------- */
+
+.about-us{
+  width: 100%;
+  height: 80%;
+}
+
 
 /*------------------------------------------ Testimonial Section -------------------------------------------*/
 
@@ -294,7 +308,7 @@ ul > li > a:hover {
 .container {
   width: 400px;
   height: 220px;
-  background-color: red;
+  background-color: var(--primary-color);
   border-radius: 20px;
   position: relative;
   display: flex;

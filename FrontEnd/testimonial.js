@@ -89,5 +89,5 @@ function updateTestimonial_2() {
   if (index2 === testimonials.length) {
     index2 = Math.ceil(testimonials.length / 2);
   }
-  setTimeout(updateTestimonial_2, 5000);
+  setTimeout(updateTestimonial_2, 10000);
 }

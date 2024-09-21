@@ -1,7 +1,7 @@
 :root {
   --primary-color: #001f3f;
-  --btn-color: #ff0000;
-  --btn-color-hover: #ff0000dd;
+  --btn-color: #e4e80b;
+  --btn-color-hover: #dcc605dd;
   --txt-color: #ffffff;
   --title-color: #ffd700;
 }
@@ -194,7 +194,7 @@ ul > li > a:hover {
   padding: 8px 12px;
   font-size: 18px;
   font-weight: 700;
-  background-color: var(--btn-color);
+  background-color: var(--title-color);
   text-decoration: none;
   transition: 0.3s ease-in;
 }
